@@ -1,31 +1,20 @@
-// FavoritePlaces.jsx För att hantera favoritplatser
-/*import React from 'react';
+import React from 'react';
+import './FavoritePlaces.css';
 
-const FavoritePlaces = ({ favorites }) => {
+const FavoritePlaces = ({ favorites, onRemoveFavorite, onSelectLocation }) => {
   return (
-    <div>
-      <h2>Favorite Places</h2>
-      {favorites.length > 0 ? (
-        <ul>
-          {favorites.map((place, index) => (
-            <li key={index}>
-              <button
-                onClick={() => {
-                  // När en favoritplats klickas på, sätt den som aktuell plats
-                  window.location.reload(); // Ladda om sidan för att uppdatera vädret
-                  localStorage.setItem('location', place);
-                }}
-              >
-                {place}
-              </button>
-            </li>
-          ))}
-        </ul>
-      ) : (
-        <p>No favorite places saved yet!</p>
-      )}
+    <div className="favorite-places">
+      <h3>Favoritplatser</h3>
+      <div className="favorites-list">
+        {favorites.map((place, index) => (
+          <div key={index} className="favorite-item">
+            <span onClick={() => onSelectLocation(place)}>{place}</span>
+            <button onClick={() => onRemoveFavorite(place)}>Ta bort</button>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
 
-export default FavoritePlaces;*/
+export default FavoritePlaces;

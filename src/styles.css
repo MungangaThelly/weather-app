@@ -2,8 +2,8 @@
 
 /* Grundläggande stil för applikationen */
 :root {
-  --primary-color: #3498db; /* Blå */
-  --secondary-color: #2ecc71; /* Grön */
+  --primary-color:green; /* Blå */
+  --secondary-color:  #3498db; /* Grön */
   --background-color: #f5f5f5; /* Ljusgrå */
   --text-color: #333; /* Mörkgrå */
   --button-color: #e74c3c; /* Röd */
@@ -22,7 +22,7 @@
 
 body {
   font-family: 'Arial', sans-serif;
-  background-color: var(--background-color);
+  background-color: lightblue;
   color: var(--text-color);
   line-height: 1.6;
   padding: 20px;
