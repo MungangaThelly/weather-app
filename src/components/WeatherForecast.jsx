@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { fetchForecastData } from '../api';
 import moment from 'moment';
+//import './WeatherForecast.css';
 
 const ForecastCard = ({ location }) => {
   const [forecast, setForecast] = useState([]);
@@ -21,7 +22,7 @@ const ForecastCard = ({ location }) => {
   }, [location]);
 
   if (error) {
-    return <div>{error}</div>;
+    return <div className="error">{error}</div>;
   }
 
   const groupedForecast = forecast.reduce((acc, curr) => {

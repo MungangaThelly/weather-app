@@ -1,5 +1,5 @@
 // FavoritePlaces.jsx För att hantera favoritplatser
-import React from 'react';
+/*import React from 'react';
 
 const FavoritePlaces = ({ favorites }) => {
   return (
@@ -28,4 +28,4 @@ const FavoritePlaces = ({ favorites }) => {
   );
 };
 
-export default FavoritePlaces;
+export default FavoritePlaces;*/

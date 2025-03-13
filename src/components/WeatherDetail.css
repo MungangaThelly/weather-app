@@ -1,0 +1,64 @@
+/* WeatherDetail.css */
+
+/* Container för hela komponenten */
+.weather-detail {
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+  }
+  
+  /* Rubrik för 5-dagars prognos */
+  .weather-detail h2 {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Container för varje dag i prognosen */
+  .forecast-day {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Sista dagen ska inte ha en kantlinje under */
+  .forecast-day:last-child {
+    border-bottom: none;
+  }
+  
+  /* Stil för datum och tid */
+  .forecast-day p {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0;
+  }
+  
+  /* Stil för temperatur (min/max) */
+  .forecast-day .temp {
+    font-size: 16px;
+    color: #007bff;
+    font-weight: bold;
+  }
+  
+  /* Stil för väderbeskrivning */
+  .forecast-day .weather-description {
+    font-size: 14px;
+    color: #444;
+    text-transform: capitalize; /* Gör beskrivningen mer läsbar */
+  }
+  
+  /* Laddningsmeddelande */
+  .loading {
+    font-size: 16px;
+    color: #666;
+    text-align: center;
+    margin: 20px 0;
+  }

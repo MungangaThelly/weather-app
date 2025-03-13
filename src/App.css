@@ -1,42 +1,85 @@
-#root {
-  max-width: 1280px;
+/* App.css */
+
+/* Globala stilar för hela applikationen */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f4f8;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Container för hela applikationen */
+.app-container {
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 20px;
+}
+
+/* Rubrik för applikationen */
+.app-title {
+  font-size: 32px;
   text-align: center;
+  color: #007bff;
+  margin-bottom: 20px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Stil för söksektionen */
+.search-section {
+  margin-bottom: 30px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Stil för väderkortsektionen */
+.weather-card-section {
+  margin-bottom: 30px;
+}
+
+/* Stil för prognossektionen */
+.forecast-section {
+  margin-bottom: 30px;
+}
+
+/* Stil för detaljvyn */
+.detail-section {
+  margin-bottom: 30px;
+}
+
+/* Stil för favoritplatser (om du aktiverar den) */
+.favorites-section {
+  margin-bottom: 30px;
+}
+
+/* Knapp för att lägga till favoritplatser */
+.add-favorite-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-favorite-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsiv design för mindre skärmar */
+@media (max-width: 768px) {
+  .app-container {
+    padding: 10px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .app-title {
+    font-size: 24px;
   }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  .add-favorite-button {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }

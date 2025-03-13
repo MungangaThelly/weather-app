@@ -1,6 +1,7 @@
 // WeatherDetail.jsx För att visa detaljerad väderinformation
 import React, { useState, useEffect } from 'react';
 import { fetchForecastData } from '../api';
+//import './WeatherDetail.css';
 
 const WeatherDetail = ({ location }) => {
   const [forecast, setForecast] = useState([]);
@@ -17,16 +18,18 @@ const WeatherDetail = ({ location }) => {
     getForecast();
   }, [location]);
 
-  if (forecast.length === 0) return <div>Loading...</div>;
+  if (forecast.length === 0) return <div className="loading">Loading...</div>;
 
   return (
-    <div>
+    <div className="weather-detail">
       <h2>5-Day Forecast</h2>
       {forecast.map((day, index) => (
-        <div key={index}>
+        <div className="forecast-day" key={index}>
           <p>{day.dt_txt}</p>
-          <p>Min: {day.main.temp_min}°C / Max: {day.main.temp_max}°C</p>
-          <p>{day.weather[0].description}</p>
+          <p className="temp">
+            Min: {day.main.temp_min}°C / Max: {day.main.temp_max}°C
+          </p>
+          <p className="weather-description">{day.weather[0].description}</p>
         </div>
       ))}
     </div>

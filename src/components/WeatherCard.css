@@ -1,0 +1,62 @@
+/* WeatherCard.css */
+
+/* Container för hela väderkortet */
+.weather-card {
+    font-family: Arial, sans-serif;
+    max-width: 300px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  /* Rubrik för stadens namn */
+  .weather-card h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  /* Stil för datum och tid */
+  .weather-card p {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0;
+  }
+  
+  /* Stil för temperatur */
+  .weather-card .temp {
+    font-size: 20px;
+    font-weight: bold;
+    color: #007bff;
+    margin: 15px 0;
+  }
+  
+  /* Stil för väderbeskrivning */
+  .weather-card .weather-description {
+    font-size: 16px;
+    color: #444;
+    margin: 10px 0;
+    text-transform: capitalize; /* Gör beskrivningen mer läsbar */
+  }
+  
+  /* Container för väderikonen */
+  .weather-card .weather-icon {
+    margin: 15px 0;
+  }
+  
+  .weather-card .weather-icon img {
+    width: 80px;
+    height: 80px;
+  }
+  
+  /* Stil för felmeddelanden */
+  .error {
+    font-size: 16px;
+    color: #dc3545;
+    text-align: center;
+    margin: 20px 0;
+  }
