@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from 'react';
 import { fetchForecastData } from '../api';
 import moment from 'moment';
-//import './WeatherForecast.css';
 
 const ForecastCard = ({ location }) => {
   const [forecast, setForecast] = useState([]);

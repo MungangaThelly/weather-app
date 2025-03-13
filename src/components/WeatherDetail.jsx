@@ -1,7 +1,7 @@
 // WeatherDetail.jsx För att visa detaljerad väderinformation
 import React, { useState, useEffect } from 'react';
 import { fetchForecastData } from '../api';
-//import './WeatherDetail.css';
+import './WeatherDetail.css';
 
 const WeatherDetail = ({ location }) => {
   const [forecast, setForecast] = useState([]);
