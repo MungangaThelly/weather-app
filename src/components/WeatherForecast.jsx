@@ -14,7 +14,7 @@ const ForecastCard = ({ location }) => {
         setForecast(data.list);  // Store the list of forecast data
         setError(null);
       } catch (error) {
-        setError('Could not fetch forecast data. Please try again later.');
+        setError('Det gick inte att hämta prognosdata. Vänligen försök igen senare.');
       }
     };
     getForecast();

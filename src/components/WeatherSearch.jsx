@@ -14,11 +14,11 @@ const WeatherSearch = ({ onSearch }) => {
     <form onSubmit={handleSubmit} className="search-form">
       <input
         type="text"
-        placeholder="Search for a location"
+        placeholder="Sök efter en plats"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
       />
-      <button type="submit">Search</button>
+      <button type="submit">Sök</button>
     </form>
   );
 };

@@ -6,7 +6,7 @@ import WeatherSearch from './components/WeatherSearch';
 import FavoritePlaces from './components/FavoritePlaces';
 import Loader from './components/Loader'; // Ny komponent för laddningsindikator
 import ErrorMessage from './components/ErrorMessage'; // Ny komponent för felmeddelanden
-import useGeolocation from './components/Location';
+import useGeolocation from './components/useGeolocation';
 import './styles.css';
 
 const App = () => {
@@ -93,7 +93,6 @@ const App = () => {
               onError={(err) => setError(err)}
               onLoading={(loading) => setIsLoading(loading)} />
           </div>
-
 
           {/* Knapp för att lägga till favoritplats */}
           <button

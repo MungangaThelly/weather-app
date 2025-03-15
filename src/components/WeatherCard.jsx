@@ -15,7 +15,7 @@ const WeatherCard = ({ location }) => {
         setWeather(data);
         setError(null);
       } catch (error) {
-        setError('Could not fetch weather data. Please try again later.');
+        setError('Det gick inte att hämta väderdata. Vänligen försök igen senare.');
       }
     };
     getWeather();
