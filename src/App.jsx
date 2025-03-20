@@ -53,7 +53,7 @@ const App = () => {
 
   return (
     <div className="app-container">
-      <h1 className="app-title">Väder Applikation</h1>
+      <h1 className="app-title">Väder-App</h1>
 
       {/* Söksektion */}
       <div className="search-section">

@@ -1,0 +1,111 @@
+/* Container for the search form */
+.search-form {
+  position: absolute; /* Use absolute positioning to place the search form */
+  top: 20px; /* Distance from the top */
+  left: 20px; /* Distance from the left */
+  display: flex; /* Display children in a row */
+  align-items: center; /* Center items vertically */
+  width: auto; /* Adjust width based on content */
+  max-width: 350px; /* Maximum width */
+  padding: 5px 10px; /* Adjusted padding */
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the input field */
+.search-form input {
+  width: 100px; /* Significantly reduced width for a shorter input */
+  padding: 8px; /* Adjust padding for a smaller input */
+  margin-right: 10px; /* Space between input and button */
+  font-size: 0.9rem; /* Reduced font size */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+/* Focus state for the input field */
+.search-form input:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+/* Style for the button */
+.search-form button {
+  padding: 8px 15px; /* Adjusted padding for a smaller button */
+  font-size: 0.9rem; /* Reduced font size for the button */
+  color: white;
+  background-color: #3498db;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the button */
+.search-form button:hover {
+  background-color: #2980b9;
+}
+
+/* Placeholder style - Reduced font size */
+.search-form input::placeholder {
+  font-size: 0.8rem; /* Smaller font size for the placeholder */
+  color: #888; /* Lighter color for placeholder text */
+}
+
+/* Responsive design */
+
+/* For tablets (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .search-form {
+    max-width: 80%; /* Adjust width to fit better on smaller screens */
+  }
+
+  .search-form input {
+    font-size: 0.85rem;
+    padding: 7px;
+    width: 90px; /* Further reduced width for mobile/tablets */
+  }
+
+  .search-form button {
+    font-size: 0.85rem;
+    padding: 7px 12px;
+  }
+}
+
+/* For mobile devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .search-form {
+    max-width: 80%; /* Slightly larger width on mobile */
+  }
+
+  .search-form input {
+    font-size: 0.85rem; /* Adjust font size for smaller screens */
+    padding: 7px;
+    width: 80px; /* Further reduced width for mobile */
+  }
+
+  .search-form button {
+    font-size: 0.85rem;
+    padding: 7px 12px;
+  }
+}
+
+/* For very small mobile screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .search-form {
+    max-width: 90%; /* Full width for very small screens */
+  }
+
+  .search-form input {
+    font-size: 0.75rem; /* Further reduced font size for small screens */
+    padding: 6px;
+    width: 70px; /* Even smaller width for very small screens */
+  }
+
+  .search-form button {
+    font-size: 0.75rem;
+    padding: 6px 10px;
+  }
+}

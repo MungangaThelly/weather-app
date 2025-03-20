@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import './Location.css';
+import './useGeolocation.css';
 
 const useGeolocation = () => {
   const [location, setLocation] = useState({ lat: null, lon: null });

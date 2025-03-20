@@ -1,21 +1,58 @@
+/* Loader Container */
 .loader {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 20px 0;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+/* Spinner Style */
+.spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+/* Spin Animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
   .spinner {
-    border: 4px solid #f3f3f3;
-    border-top: 4px solid #3498db;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    animation: spin 1s linear infinite;
+    width: 50px; /* Slightly larger spinner for tablets */
+    height: 50px; /* Same as width */
   }
-  
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+
+  .loader {
+    margin: 20px 10%; /* Slightly adjusted margin for tablets */
   }
+}
+
+@media (max-width: 768px) {
+  .spinner {
+    width: 60px; /* Larger spinner for smaller screens */
+    height: 60px; /* Same as width */
+  }
+
+  .loader {
+    margin: 20px 15%; /* Adjust margin for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .spinner {
+    width: 50px; /* Slightly smaller spinner for mobile */
+    height: 50px; /* Same as width */
+  }
+
+  .loader {
+    margin: 20px 10%; /* Reduced margin for mobile screens */
+  }
+}

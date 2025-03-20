@@ -1,64 +1,106 @@
-/* WeatherDetail.css */
+/* Style for the toggle button */
+.toggle-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1100; /* Ensure button stays on top */
+}
 
-/* Container för hela komponenten */
+.toggle-button:hover {
+  background-color: #2980b9;
+}
+
+/* Positioning the forecast container */
 .weather-detail {
-    font-family: Arial, sans-serif;
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #f9f9f9;
+  position: fixed; /* Makes the forecast stay on the screen even when scrolling */
+  top: 80px; /* Adjust the distance from the top */
+  right: 20px;
+  width: 300px;
+  max-width: 100%; /* Ensures it won't overflow the screen */
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Ensures the forecast is on top of other content */
+  display: none; /* Hidden by default */
+  transition: width 0.3s ease, top 0.3s ease;
+}
+
+.weather-detail h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.forecast-day {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.weather-detail.show {
+  display: block; /* Show the forecast when it's toggled */
+}
+
+/* Optional: For mobile responsiveness */
+@media (max-width: 1024px) {
+  .weather-detail {
+    width: 260px;
+    top: 60px; /* Adjust top position for smaller screens */
   }
-  
-  /* Rubrik för 5-dagars prognos */
+
+  .toggle-button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Make the forecast container fit smaller screens */
+  .weather-detail {
+    width: 90%;  /* Make the container take up 90% of the screen */
+    top: 50px;  /* Adjust top position */
+    left: 5%; /* Add left margin for spacing */
+  }
+
+  .toggle-button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
   .weather-detail h2 {
-    font-size: 24px;
-    color: #333;
-    text-align: center;
-    margin-bottom: 20px;
+    font-size: 1.2rem;
   }
-  
-  /* Container för varje dag i prognosen */
+
   .forecast-day {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
+    font-size: 0.9rem;
   }
-  
-  /* Sista dagen ska inte ha en kantlinje under */
-  .forecast-day:last-child {
-    border-bottom: none;
+}
+
+@media (max-width: 480px) {
+  .weather-detail {
+    width: 95%;  /* Ensure the container is almost full width */
+    top: 40px;   /* Adjust top position */
+    left: 2.5%;  /* Adjust left margin for better centering */
   }
-  
-  /* Stil för datum och tid */
-  .forecast-day p {
-    font-size: 14px;
-    color: #666;
-    margin: 5px 0;
+
+  .toggle-button {
+    font-size: 0.8rem;
+    padding: 6px 14px;
   }
-  
-  /* Stil för temperatur (min/max) */
-  .forecast-day .temp {
-    font-size: 16px;
-    color: #007bff;
-    font-weight: bold;
+
+  .weather-detail h2 {
+    font-size: 1.1rem;
   }
-  
-  /* Stil för väderbeskrivning */
-  .forecast-day .weather-description {
-    font-size: 14px;
-    color: #444;
-    text-transform: capitalize; /* Gör beskrivningen mer läsbar */
+
+  .forecast-day {
+    font-size: 0.85rem;
   }
-  
-  /* Laddningsmeddelande */
-  .loading {
-    font-size: 16px;
-    color: #666;
-    text-align: center;
-    margin: 20px 0;
-  }
+}
