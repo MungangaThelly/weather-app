@@ -1,6 +1,6 @@
 // WeatherCard.jsx
 import React, { useState, useEffect } from 'react';
-import { fetchWeatherData } from '../api';
+import { fetchWeatherData } from '../services/api';
 import './WeatherCard.css';
 import moment from 'moment';
 

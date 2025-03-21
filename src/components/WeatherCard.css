@@ -1,9 +1,9 @@
 /* Container for the entire weather cards */
 .weather-cards-container {
   display: flex;
-  flex-wrap: nowrap; /* Prevent wrapping, cards will stay on a single line */
-  justify-content: space-evenly; /* Evenly distribute cards horizontally */
-  gap: 10px; /* Reduce gap between cards */
+  flex-wrap: wrap; /* Allow wrapping for cards to fit horizontally */
+  justify-content: space-between; /* Evenly distribute cards with some space between them */
+  gap: 5px; /* Reduced gap between cards */
   margin: 20px auto;
   padding: 15px;
   box-sizing: border-box;
@@ -15,21 +15,22 @@
 .weather-card {
   font-family: Arial, sans-serif;
   width: 100%;
-  max-width: 150px; /* Reduced max-width to make each card fit horizontally */
-  padding: 15px;
+  max-width: 100px; /* Reduced max-width to make each card smaller */
+  flex: 1 0 20%; /* Each card takes up 20% of the available width */
+  padding: 10px; /* Reduced padding to make the card smaller */
   border: 1px solid #ccc;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px; /* Slightly smaller border-radius for a more compact look */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Reduced shadow size */
   background-color: #f9f9f9;
   text-align: center;
   box-sizing: border-box; /* Include padding in width calculations */
   overflow: hidden;
-  max-height: 90vh; /* Limit height to avoid vertical overflow */
+  max-height: 50vh; /* Slightly reduced height limit */
 }
 
 /* Heading for city name */
 .weather-card h1 {
-  font-size: 1.6rem; /* Reduced heading size for smaller cards */
+  font-size: 0.8rem; /* Adjusted to ensure readability */
   color: #333;
   margin-bottom: 10px;
   word-wrap: break-word;
@@ -37,14 +38,14 @@
 
 /* Style for date and time */
 .weather-card p {
-  font-size: 0.9rem;
+  font-size: 0.6rem;
   color: #666;
   margin: 5px 0;
 }
 
 /* Style for temperature */
 .weather-card .temp {
-  font-size: 1.3rem; /* Adjusted temperature font size */
+  font-size: 1rem; /* Adjusted temperature font size for clarity */
   font-weight: bold;
   color: #007bff;
   margin: 15px 0;
@@ -52,7 +53,7 @@
 
 /* Style for weather description */
 .weather-card .weather-description {
-  font-size: 1rem; /* Adjusted weather description font size */
+  font-size: 0.8rem; /* Adjusted weather description font size */
   color: #444;
   margin: 10px 0;
   text-transform: capitalize;
@@ -64,8 +65,8 @@
 }
 
 .weather-card .weather-icon img {
-  width: 40px; /* Reduced icon size */
-  height: 40px;
+  width: 25px; /* Slightly increased icon size */
+  height: 25px;
 }
 
 /* Style for error messages */
@@ -85,11 +86,12 @@
   }
 
   .weather-card {
-    max-width: 180px; /* Slightly larger width for tablets */
+    max-width: 120px; /* Slightly larger width for tablets */
+    flex: 1 0 30%; /* Cards take up 30% of the available space on tablets */
   }
 
   .weather-card h1 {
-    font-size: 1.5rem; /* Adjust heading font size */
+    font-size: 1rem; /* Adjust heading font size */
   }
 
   .weather-card .temp {
@@ -113,12 +115,13 @@
   }
 
   .weather-card {
-    max-width: 45%; /* Cards take up more space on mobile */
+    max-width: 100px; /* Reduced width to fit cards on smaller screens */
+    flex: 1 0 30%; /* Cards take up 30% of the available space */
     padding: 10px;
   }
 
   .weather-card h1 {
-    font-size: 1.3rem; /* Adjust heading size for mobile */
+    font-size: 1.2rem; /* Adjust heading size for mobile */
   }
 
   .weather-card .temp {
@@ -126,12 +129,12 @@
   }
 
   .weather-card .weather-description {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 
   .weather-card .weather-icon img {
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
   }
 
   .error {
@@ -142,18 +145,19 @@
 /* Very small mobile screens (max-width: 480px) */
 @media (max-width: 480px) {
   .weather-cards-container {
-    flex-direction: column; /* Stack cards vertically */
-    align-items: center;
-    gap: 15px;
+    flex-direction: row; /* Align cards horizontally */
+    justify-content: space-around; /* Spread cards evenly */
+    gap: 5px;
   }
 
   .weather-card {
-    max-width: 90%; /* Full width for very small screens */
+    max-width: 80px; /* Full width for very small screens */
+    flex: 1 0 40%; /* Cards take up 40% of the available space */
     padding: 8px;
   }
 
   .weather-card h1 {
-    font-size: 1.4rem;
+    font-size: 1rem; /* Adjust font size for smaller devices */
   }
 
   .weather-card .temp {
@@ -165,8 +169,8 @@
   }
 
   .weather-card .weather-icon img {
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
   }
 
   .error {

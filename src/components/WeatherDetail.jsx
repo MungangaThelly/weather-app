@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { fetchForecastData } from '../api';
+import { fetchForecastData } from '../services/api';
 import './WeatherDetail.css';
 
 const WeatherDetail = ({ location }) => {

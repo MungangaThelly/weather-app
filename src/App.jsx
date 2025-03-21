@@ -5,8 +5,8 @@ import WeatherDetail from './components/WeatherDetail';
 import WeatherSearch from './components/WeatherSearch';
 import FavoritePlaces from './components/FavoritePlaces';
 import Loader from './components/Loader'; // Ny komponent för laddningsindikator
-import ErrorMessage from './components/ErrorMessage'; // Ny komponent för felmeddelanden
-import useGeolocation from './components/useGeolocation';
+import ErrorMessage from './components/ErrorMessage/ErrorMessage'; // Ny komponent för felmeddelanden
+import useGeolocation from './components/useGeolocation/useGeolocation';
 import './styles.css';
 
 const App = () => {
