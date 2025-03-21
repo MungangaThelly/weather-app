@@ -1,35 +1,39 @@
 .error-message {
-  background-color: #ffebee;
-  color: #c62828;
-  padding: 12px 20px; /* Adjusted padding for better responsiveness */
-  border-radius: 8px;
-  margin: 20px 10%; /* Margin adjusted for better spacing on smaller screens */
-  text-align: center;
-  font-size: 1rem; /* Default font size */
-  box-sizing: border-box; /* Ensures padding doesn't overflow */
+  background-color: #ffebee; /* Ljus rosa bakgrundsfärg för felmeddelandet */
+  color: #c62828; /* Mörkröd textfärg för att markera ett fel */
+  padding: 12px 20px; /* Padding (inre marginal) på 12px upptill och nertill samt 20px på sidorna för bättre responsivitet */
+  border-radius: 8px; /* Rundade hörn på felmeddelandet */
+  margin: 20px 10%; /* Marginal på 20px ovanför och under samt 10% från kanterna på skärmen för att ge bättre utrymme på små skärmar */
+  text-align: center; /* Centrerar texten i felmeddelandet */
+  font-size: 1rem; /* Standard fontstorlek för texten */
+  box-sizing: border-box; /* Säkerställer att padding inte överflödar utan ingår i totalbredden */
 }
 
 /* Responsiv design */
+
+/* För tabletter och mindre skärmar (max-bredd: 1024px) */
 @media (max-width: 1024px) {
   .error-message {
-    padding: 10px 15px; /* Slightly smaller padding on tablets */
-    margin: 20px 15%; /* Adjust margin for mid-sized screens */
-    font-size: 0.95rem; /* Slightly smaller text for medium screens */
+    padding: 10px 15px; /* Lite mindre padding för tabletter för att ge mer utrymme */
+    margin: 20px 15%; /* Justera marginalen för medelstora skärmar */
+    font-size: 0.95rem; /* Lite mindre fontstorlek för skärmar i mellanstorlek */
   }
 }
 
+/* För mobilskärmar och mindre skärmar (max-bredd: 768px) */
 @media (max-width: 768px) {
   .error-message {
-    padding: 8px 12px; /* Smaller padding for mobile screens */
-    margin: 15px 10%; /* Adjust margin for mobile screens */
-    font-size: 0.9rem; /* Smaller font size for mobile screens */
+    padding: 8px 12px; /* Mindre padding för mobilskärmar */
+    margin: 15px 10%; /* Justerar marginalen för mobilskärmar */
+    font-size: 0.9rem; /* Mindre fontstorlek för mobilskärmar */
   }
 }
 
+/* För mycket små mobilskärmar (max-bredd: 480px) */
 @media (max-width: 480px) {
   .error-message {
-    padding: 8px 10px; /* Further reduced padding for very small screens */
-    margin: 10px 5%; /* Reduced margin for small screens */
-    font-size: 0.85rem; /* Font size even smaller for smaller devices */
+    padding: 8px 10px; /* Ytterligare reducerad padding för mycket små skärmar */
+    margin: 10px 5%; /* Minskat marginal för små skärmar */
+    font-size: 0.85rem; /* Fontstorleken reduceras ytterligare för små enheter */
   }
 }

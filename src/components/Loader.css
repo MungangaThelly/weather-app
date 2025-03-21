@@ -1,58 +1,62 @@
-/* Loader Container */
+/* Container för loadern */
 .loader {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 20px 0;
+  display: flex; /* Använder flexbox för att arrangera innehållet */
+  flex-direction: column; /* Staplar innehållet vertikalt */
+  align-items: center; /* Centrerar innehållet horisontellt */
+  justify-content: center; /* Centrerar innehållet vertikalt */
+  margin: 20px 0; /* Lägger till marginaler ovanför och under */
 }
 
-/* Spinner Style */
+/* Stil för spinnern */
 .spinner {
-  border: 4px solid #f3f3f3;
-  border-top: 4px solid #3498db;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  animation: spin 1s linear infinite;
+  border: 4px solid #f3f3f3; /* Ljusgrå kant för spinnern */
+  border-top: 4px solid #3498db; /* Blå färg på spinnerns övre kant */
+  border-radius: 50%; /* Gör spinnern rund */
+  width: 40px; /* Bredd på spinnern */
+  height: 40px; /* Höjd på spinnern, samma som bredd */
+  animation: spin 1s linear infinite; /* Spinneranimation som varar i 1 sekund, linjär och oändlig */
 }
 
-/* Spin Animation */
+/* Spin-animation */
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% { transform: rotate(0deg); } /* Vid 0% av animationen är rotationen 0 grader */
+  100% { transform: rotate(360deg); } /* Vid 100% av animationen är rotationen 360 grader (full rotation) */
 }
 
-/* Responsive Design */
+/* Responsiv design */
+
+/* För tabletter (max-bredd: 1024px) */
 @media (max-width: 1024px) {
   .spinner {
-    width: 50px; /* Slightly larger spinner for tablets */
-    height: 50px; /* Same as width */
+    width: 50px; /* Gör spinnern lite större för tabletter */
+    height: 50px; /* Samma som bredden */
   }
 
   .loader {
-    margin: 20px 10%; /* Slightly adjusted margin for tablets */
+    margin: 20px 10%; /* Justerar marginalerna för tabletter */
   }
 }
 
+/* För mobilskärmar (max-bredd: 768px) */
 @media (max-width: 768px) {
   .spinner {
-    width: 60px; /* Larger spinner for smaller screens */
-    height: 60px; /* Same as width */
+    width: 60px; /* Större spinner för mindre skärmar */
+    height: 60px; /* Samma som bredden */
   }
 
   .loader {
-    margin: 20px 15%; /* Adjust margin for smaller screens */
+    margin: 20px 15%; /* Justerar marginalerna för små skärmar */
   }
 }
 
+/* För mycket små mobilskärmar (max-bredd: 480px) */
 @media (max-width: 480px) {
   .spinner {
-    width: 50px; /* Slightly smaller spinner for mobile */
-    height: 50px; /* Same as width */
+    width: 50px; /* Lite mindre spinner för mobil */
+    height: 50px; /* Samma som bredden */
   }
 
   .loader {
-    margin: 20px 10%; /* Reduced margin for mobile screens */
+    margin: 20px 10%; /* Minskat utrymme för små mobilskärmar */
   }
 }

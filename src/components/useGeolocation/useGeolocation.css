@@ -1,114 +1,113 @@
-/* Geolocation.css */
-
 /* Container för hela komponenten */
 .geolocation-container {
-  font-family: Arial, sans-serif;
-  width: 100%; /* Use full width on small screens */
-  max-width: 500px; /* Limit width for larger screens */
-  margin: 20px auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  box-sizing: border-box; /* Ensure padding is included in the width calculation */
+  font-family: Arial, sans-serif; /* Sätt fonten till Arial, eller sans-serif om Arial inte är tillgänglig */
+  width: 100%; /* Använd full bredd på små skärmar */
+  max-width: 500px; /* Begränsa bredden på större skärmar */
+  margin: 20px auto; /* Lägger till 20px marginal ovanför och under samt centrerar innehållet horisontellt */
+  padding: 20px; /* Lägger till 20px inre marginal (padding) */
+  border: 1px solid #ccc; /* Grå kantlinje runt containern */
+  border-radius: 8px; /* Rundade hörn på containern */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Lägger till en svag skugga för en subtil lyft-effekt */
+  text-align: center; /* Centrerar texten inuti containern */
+  box-sizing: border-box; /* Inkluderar padding och border i bredden av elementet */
 }
 
 /* Stil för platsinformation */
 .location-info {
-  font-size: 1rem; /* Default font size */
-  color: #333;
-  margin-bottom: 15px;
+  font-size: 1rem; /* Standard fontstorlek */
+  color: #333; /* Mörkgrå textfärg */
+  margin-bottom: 15px; /* Lägger till ett utrymme under platsinformationen */
 }
 
 .location-info span {
-  font-weight: bold;
-  color: #007bff;
+  font-weight: bold; /* Gör texten fet */
+  color: #007bff; /* Blå färg för länken eller markerad text */
 }
 
 /* Stil för felmeddelanden */
 .error-message {
-  font-size: 0.9rem; /* Adjusted for responsiveness */
-  color: #dc3545;
-  margin-top: 10px;
+  font-size: 0.9rem; /* Justerad fontstorlek för bättre läsbarhet */
+  color: #dc3545; /* Röd färg för felmeddelanden */
+  margin-top: 10px; /* Lägger till ett utrymme ovanför felmeddelandet */
 }
 
 /* Knapp för att uppdatera plats */
 .update-button {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1rem;
-  margin-top: 10px;
-  width: 100%; /* Make button full width on small screens */
+  background-color: #007bff; /* Blå bakgrundsfärg för knappen */
+  color: white; /* Vit textfärg */
+  border: none; /* Tar bort standardramen från knappen */
+  padding: 10px 20px; /* Padding runt knappen */
+  border-radius: 5px; /* Rundade hörn på knappen */
+  cursor: pointer; /* Gör knappen klickbar */
+  font-size: 1rem; /* Standard fontstorlek för knappen */
+  margin-top: 10px; /* Lägger till ett utrymme ovanför knappen */
+  width: 100%; /* Gör knappen full bredd på små skärmar */
 }
 
+/* Effekt vid hover på knappen */
 .update-button:hover {
-  background-color: #0056b3;
+  background-color: #0056b3; /* Mörkare blå färg vid hover */
 }
 
 /* Responsiv design */
 
-/* Tablet screens and smaller (max-width: 1024px) */
+/* För tabletter och mindre skärmar (max-bredd: 1024px) */
 @media (max-width: 1024px) {
   .geolocation-container {
-    max-width: 400px; /* Limit width for tablets */
-    padding: 15px; /* Adjust padding for smaller screens */
+    max-width: 400px; /* Begränsar bredden för tabletter */
+    padding: 15px; /* Justerar padding för mindre skärmar */
   }
 
   .location-info {
-    font-size: 1rem; /* Adjust font size for better readability */
+    font-size: 1rem; /* Justerar fontstorleken för bättre läsbarhet */
   }
 
   .error-message {
-    font-size: 0.9rem; /* Adjust font size for error messages */
+    font-size: 0.9rem; /* Justerar fontstorleken för felmeddelanden */
   }
 
   .update-button {
-    font-size: 0.9rem; /* Smaller button font size */
+    font-size: 0.9rem; /* Mindre fontstorlek på knappen */
   }
 }
 
-/* Mobile screens and smaller (max-width: 768px) */
+/* För mobilskärmar och mindre skärmar (max-bredd: 768px) */
 @media (max-width: 768px) {
   .geolocation-container {
-    max-width: 90%; /* Allow container to use more of the screen */
-    padding: 10px; /* Smaller padding */
+    max-width: 90%; /* Låter containern ta upp mer av skärmen */
+    padding: 10px; /* Minskat padding för mindre skärmar */
   }
 
   .location-info {
-    font-size: 0.9rem; /* Adjust font size for mobile */
+    font-size: 0.9rem; /* Justerar fontstorleken för mobil */
   }
 
   .error-message {
-    font-size: 0.85rem; /* Further adjust error message font size */
+    font-size: 0.85rem; /* Ytterligare justering av fontstorleken för felmeddelanden */
   }
 
   .update-button {
-    font-size: 0.9rem; /* Slightly smaller button font size for mobile */
+    font-size: 0.9rem; /* Liten fontstorlek på knappen för mobil */
   }
 }
 
-/* Very small mobile screens (max-width: 480px) */
+/* För mycket små mobilskärmar (max-bredd: 480px) */
 @media (max-width: 480px) {
   .geolocation-container {
-    max-width: 95%; /* Allow container to be almost full width */
-    padding: 8px; /* Further reduce padding for small screens */
+    max-width: 95%; /* Låter containern ta nästan full bredd på mycket små skärmar */
+    padding: 8px; /* Minskat padding för små skärmar */
   }
 
   .location-info {
-    font-size: 0.85rem; /* Reduce font size for very small screens */
+    font-size: 0.85rem; /* Minskar fontstorleken ytterligare för mycket små skärmar */
   }
 
   .error-message {
-    font-size: 0.8rem; /* Further reduce font size for error messages */
+    font-size: 0.8rem; /* Minskar fontstorleken på felmeddelandet för små skärmar */
   }
 
   .update-button {
-    font-size: 0.85rem; /* Small button font size for mobile */
-    padding: 8px 16px; /* Adjust button padding */
+    font-size: 0.85rem; /* Mycket liten fontstorlek på knappen */
+    padding: 8px 16px; /* Justerat padding för knappen */
   }
 }

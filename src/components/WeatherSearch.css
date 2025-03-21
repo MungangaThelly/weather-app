@@ -1,111 +1,111 @@
-/* Container for the search form */
+/* Container för sökformuläret */
 .search-form {
-  position: absolute; /* Use absolute positioning to place the search form */
-  top: 20px; /* Distance from the top */
-  left: 20px; /* Distance from the left */
-  display: flex; /* Display children in a row */
-  align-items: center; /* Center items vertically */
-  width: auto; /* Adjust width based on content */
-  max-width: 350px; /* Maximum width */
-  padding: 5px 10px; /* Adjusted padding */
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: absolute; /* Använder absolut positionering för att placera sökformuläret */
+  top: 20px; /* Avstånd från toppen */
+  left: 20px; /* Avstånd från vänster */
+  display: flex; /* Visar barnen i rad */
+  align-items: center; /* Centrerar elementen vertikalt */
+  width: auto; /* Justerar bredden baserat på innehållet */
+  max-width: 350px; /* Maximal bredd */
+  padding: 5px 10px; /* Justerat padding */
+  background-color: #f9f9f9; /* Bakgrundsfärg */
+  border-radius: 8px; /* Rundade hörn */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Skugga runt formuläret */
 }
 
-/* Style for the input field */
+/* Stil för inputfältet */
 .search-form input {
-  width: 100px; /* Significantly reduced width for a shorter input */
-  padding: 8px; /* Adjust padding for a smaller input */
-  margin-right: 10px; /* Space between input and button */
-  font-size: 0.9rem; /* Reduced font size */
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  background-color: #fff;
+  width: 100px; /* Betydligt reducerad bredd för ett kortare inputfält */
+  padding: 8px; /* Justerat padding för mindre inputfält */
+  margin-right: 10px; /* Utrymme mellan inputfältet och knappen */
+  font-size: 0.9rem; /* Minskat teckenstorlek */
+  border: 1px solid #ccc; /* Grå kantlinje */
+  border-radius: 4px; /* Rundade hörn på inputfältet */
+  background-color: #fff; /* Vit bakgrund för inputfältet */
 }
 
-/* Focus state for the input field */
+/* Fokuserad tillstånd för inputfältet */
 .search-form input:focus {
-  outline: none;
-  border-color: #3498db;
-  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+  outline: none; /* Tar bort den blå konturen när man fokuserar */
+  border-color: #3498db; /* Ändrar kantfärgen till blå när fokuserat */
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5); /* Lägg till en blå skugga för att markera fokuset */
 }
 
-/* Style for the button */
+/* Stil för knappen */
 .search-form button {
-  padding: 8px 15px; /* Adjusted padding for a smaller button */
-  font-size: 0.9rem; /* Reduced font size for the button */
-  color: white;
-  background-color: #3498db;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  padding: 8px 15px; /* Justerat padding för en mindre knapp */
+  font-size: 0.9rem; /* Minskat teckenstorlek för knappen */
+  color: white; /* Vit textfärg på knappen */
+  background-color: #3498db; /* Blå bakgrundsfärg för knappen */
+  border: none; /* Ingen kantlinje */
+  border-radius: 4px; /* Rundade hörn på knappen */
+  cursor: pointer; /* Pekaren blir en hand när man hovrar över knappen */
+  transition: background-color 0.3s ease; /* Lätt övergång för bakgrundsfärgsändring */
 }
 
-/* Hover effect for the button */
+/* Hover-effekt för knappen */
 .search-form button:hover {
-  background-color: #2980b9;
+  background-color: #2980b9; /* Ändrar bakgrundsfärg på knappen när man hovrar */
 }
 
-/* Placeholder style - Reduced font size */
+/* Stil för placeholder-texten - reducerad teckenstorlek */
 .search-form input::placeholder {
-  font-size: 0.8rem; /* Smaller font size for the placeholder */
-  color: #888; /* Lighter color for placeholder text */
+  font-size: 0.8rem; /* Mindre teckenstorlek för placeholder */
+  color: #888; /* Ljusare färg för placeholder-texten */
 }
 
-/* Responsive design */
+/* Responsiv design */
 
-/* For tablets (max-width: 1024px) */
+/* För tabletter (max-bredd: 1024px) */
 @media (max-width: 1024px) {
   .search-form {
-    max-width: 80%; /* Adjust width to fit better on smaller screens */
+    max-width: 80%; /* Justera bredden för att passa bättre på mindre skärmar */
   }
 
   .search-form input {
-    font-size: 0.85rem;
+    font-size: 0.85rem; /* Justera teckenstorleken för inputfältet på tabletter */
     padding: 7px;
-    width: 90px; /* Further reduced width for mobile/tablets */
+    width: 90px; /* Ytterligare reducerad bredd för tabletter */
   }
 
   .search-form button {
-    font-size: 0.85rem;
+    font-size: 0.85rem; /* Justera teckenstorleken på knappen */
     padding: 7px 12px;
   }
 }
 
-/* For mobile devices (max-width: 768px) */
+/* För mobilskärmar (max-bredd: 768px) */
 @media (max-width: 768px) {
   .search-form {
-    max-width: 80%; /* Slightly larger width on mobile */
+    max-width: 80%; /* Lite större bredd på mobil */
   }
 
   .search-form input {
-    font-size: 0.85rem; /* Adjust font size for smaller screens */
+    font-size: 0.85rem; /* Justera teckenstorlek för mindre skärmar */
     padding: 7px;
-    width: 80px; /* Further reduced width for mobile */
+    width: 80px; /* Ytterligare reducerad bredd för mobilskärmar */
   }
 
   .search-form button {
-    font-size: 0.85rem;
+    font-size: 0.85rem; /* Justera teckenstorlek för knappen */
     padding: 7px 12px;
   }
 }
 
-/* For very small mobile screens (max-width: 480px) */
+/* För mycket små mobilskärmar (max-bredd: 480px) */
 @media (max-width: 480px) {
   .search-form {
-    max-width: 90%; /* Full width for very small screens */
+    max-width: 90%; /* Full bredd för mycket små skärmar */
   }
 
   .search-form input {
-    font-size: 0.75rem; /* Further reduced font size for small screens */
+    font-size: 0.75rem; /* Ytterligare reducerad teckenstorlek för små skärmar */
     padding: 6px;
-    width: 70px; /* Even smaller width for very small screens */
+    width: 70px; /* Ännu mindre bredd för mycket små skärmar */
   }
 
   .search-form button {
-    font-size: 0.75rem;
+    font-size: 0.75rem; /* Ytterligare reducerad teckenstorlek för knappen */
     padding: 6px 10px;
   }
 }

@@ -1,6 +1,6 @@
-/* Style for the toggle button */
+/* Stil för växlingsknappen */
 .toggle-button {
-  position: fixed;
+  position: fixed; /* Fixerar knappen på skärmen */
   top: 20px;
   right: 20px;
   padding: 10px 20px;
@@ -10,26 +10,26 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  z-index: 1100; /* Ensure button stays on top */
+  z-index: 1100; /* Säkerställer att knappen är ovanpå andra element */
 }
 
 .toggle-button:hover {
   background-color: #2980b9;
 }
 
-/* Positioning the forecast container */
+/* Positionering av väderprognosens container */
 .weather-detail {
-  position: fixed; /* Makes the forecast stay on the screen even when scrolling */
-  top: 80px; /* Adjust the distance from the top */
+  position: fixed; /* Gör att prognosen stannar på skärmen även vid scrollning */
+  top: 80px; /* Justera avståndet från toppen */
   right: 20px;
   width: 300px;
-  max-width: 100%; /* Ensures it won't overflow the screen */
+  max-width: 100%; /* Säkerställer att den inte överskrider skärmen */
   padding: 20px;
   background-color: #f9f9f9;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  z-index: 1000; /* Ensures the forecast is on top of other content */
-  display: none; /* Hidden by default */
+  z-index: 1000; /* Säkerställer att prognosen är ovanpå annat innehåll */
+  display: none; /* Dold som standard */
   transition: width 0.3s ease, top 0.3s ease;
 }
 
@@ -46,14 +46,14 @@
 }
 
 .weather-detail.show {
-  display: block; /* Show the forecast when it's toggled */
+  display: block; /* Visar prognosen när den är aktiverad */
 }
 
-/* Optional: For mobile responsiveness */
+/* Valfritt: För mobilanpassning */
 @media (max-width: 1024px) {
   .weather-detail {
     width: 260px;
-    top: 60px; /* Adjust top position for smaller screens */
+    top: 60px; /* Justera toppositionen för mindre skärmar */
   }
 
   .toggle-button {
@@ -63,11 +63,11 @@
 }
 
 @media (max-width: 768px) {
-  /* Make the forecast container fit smaller screens */
+  /* Gör så att vädercontainern passar mindre skärmar */
   .weather-detail {
-    width: 90%;  /* Make the container take up 90% of the screen */
-    top: 50px;  /* Adjust top position */
-    left: 5%; /* Add left margin for spacing */
+    width: 90%;  /* Gör containern 90% av skärmens bredd */
+    top: 50px;  /* Justera toppositionen */
+    left: 5%; /* Lägg till vänster marginal för bättre avstånd */
   }
 
   .toggle-button {
@@ -86,9 +86,9 @@
 
 @media (max-width: 480px) {
   .weather-detail {
-    width: 95%;  /* Ensure the container is almost full width */
-    top: 40px;   /* Adjust top position */
-    left: 2.5%;  /* Adjust left margin for better centering */
+    width: 95%;  /* Gör så att containern nästan täcker hela bredden */
+    top: 40px;   /* Justera toppositionen */
+    left: 2.5%;  /* Justera vänstermarginalen för bättre centrering */
   }
 
   .toggle-button {
